@@ -1,0 +1,12 @@
+.focus:focus-visible{
+    outline: none ;
+}
+.back-bg{
+    background-image: url(./images/CarBg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center ;
+}
+.bold{
+    font-weight: 700;
+}
