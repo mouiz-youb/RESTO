@@ -1,6 +1,7 @@
 import React from 'react'
 
 function Button3(props) {
+  
   return (
     <div className={props.className}>
       <p className='text-gary-500  '> {props.content} </p>

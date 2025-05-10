@@ -10,7 +10,7 @@ function App() {
   const isAuthPath = location.pathname ==="/signup" ||
   location.pathname==="/login" 
   return (
-    <div className={` w-screen h-screen ${isAuthPath ? `bg-amber-600`:`grid grid-cols-1 grid-rows-10 `} `}>
+    <div className={` w-screen h-screen ${isAuthPath ? null:`grid grid-cols-1 grid-rows-10 overflow-hidden `} `}>
      {!isAuthPath&&<Navbar/>}
       <Routes>
         <Route path='/deleviry' element={<Deleviry/>} />
