@@ -4,6 +4,7 @@ import { Routes ,Route ,useLocation } from 'react-router-dom'
 import Deleviry from './pages/Deleviry'
 import Navbar from './components/Navbar'
 import Signup from './pages/Signup'
+import "./index.css"
 function App() {
   const location = useLocation()
   // check is the current path is login or register

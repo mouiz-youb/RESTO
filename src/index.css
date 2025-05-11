@@ -1,6 +1,9 @@
 .focus:focus-visible{
     outline: none ;
 }
+*{
+    font-family: 'Poppins', sans-serif;
+}
 .back-bg{
     background-image: url(./images/CarBg.svg);
     background-repeat: no-repeat;
