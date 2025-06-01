@@ -23,9 +23,22 @@ function Form() {
   }
   const handleSubmit =async (e) => {
     e.preventDefault()
-    console.log(FormData)
-    const {username_FirstName, username_lastnameName, email, password, phoneNumber, address} = FormData
-    if (!username_FirstName || !username_lastnameName || !email || !password || !phoneNumber || !address) {
+    // console.log(FormData)
+    const {
+    username_FirstName,
+    username_lastnameName,
+    Vehicle_Type,
+    phone_Number,
+    Email,
+    vehicle_Name,
+    vehicle_Color,
+    password,
+  } = FormData
+    if (!username_FirstName || !username_lastnameName || Vehicle_Type||
+    phone_Number||
+    Email||
+    vehicle_Name||
+    vehicle_Color) {
       toast("Please fill in all fields")
       return
     } 
