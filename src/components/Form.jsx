@@ -8,10 +8,12 @@ function Form() {
   const [FormData, setFormData] = useState({
     username_FirstName: "",
     username_lastnameName: "",
-    email: "",
+    Vehicle_Type: "",
+    phone_Number: "",
+    Email: "",
+    vehicle_Name: "",
+    vehicle_Color: "",
     password: "",
-    phoneNumber: "",
-    address: "",
   })
   const handleChange =(e)=>{
     setFormData((prevState) => ({
@@ -60,26 +62,29 @@ function Form() {
             onChange={handleChange}  name="email" 
             className=" cursor-pointer w-full" 
             type="text" 
-            label="Vehicle name" 
-            placeholder="Enter your restaurant’s email"  
+            label="Vehicle_Type" 
+            placeholder="Enter your vehicle type "  
             id="Vehicle"/>
             <DoubleInput
             id2="username4"
-            className=" cursor-pointer w-full" type1="text" type2="text" 
+            className=" cursor-pointer w-full" type1="text" type2="email" 
             label="Phone Number " 
-            name1="phoneNumber"
-            name2=""
+            name1="phone_Number"
+            name2="Email"
             onChange={handleChange}
             placeholder=" Enter your phone number "  
-            placeholder2="Enter your driver license number"  
+            placeholder2="Enter your Email"  
             id="username1"/>
-            <Input 
-            onChange={handleChange}  name="address" 
-            className=" cursor-pointer w-full" 
-            type="text" 
-            label="Addresse" 
-            placeholder="Enter your vehicle type (car,motor,..."  
-            id="Vehicle3"/>
+            <DoubleInput
+            id2="username4"
+            className=" cursor-pointer w-full" type1="text" type2="text" 
+            label="Vehicle name & Vehicle Color" 
+            name1="vehicle_Name"
+            name2="vehicle_Color"
+            onChange={handleChange}
+            placeholder=" Enter your Vehicle name "  
+            placeholder2="Enter your Vehicle Color"  
+            id="username1"/>
             <Input 
             onChange={handleChange}  name="password" 
             className=" cursor-pointer w-full" 

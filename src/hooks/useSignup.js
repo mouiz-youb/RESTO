@@ -3,6 +3,8 @@ import { useState } from "react"
 import axios from "axios"
 import toast from "react-hot-toast"
 import { useNavigate } from "react-router-dom"
+
+
 export const useSignup=()=>{
     const [error, seterror] = useState(false)
     const [loading, setloading] = useState(false)
@@ -11,7 +13,16 @@ export const useSignup=()=>{
       try {
         setloading(true)
         seterror(false)
-        const response= await axios.post("url",states)
+        const response= await axios.post("http://127.0.0.1:8000/auth/signup/driver/", {
+          username_FirstName,
+          username_lastnameName,
+          Vehicle_Type,
+          phone_Number,
+          Email,
+          vehicle_Name,
+          vehicle_Color,
+          password
+        })
         if (response === null || response.status !== 200) {
           seterror(true)
           toast.error("Error in signup")
