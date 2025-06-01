@@ -3,13 +3,16 @@ import { useState } from "react"
 import axios from "axios"
 import toast from "react-hot-toast"
 import { useNavigate } from "react-router-dom"
+import { useStoreOrder } from "../store/useStoreOrder"
 
 
 export const useOrder=()=>{
     const [error, seterror] = useState(false)
     const [loading, setloading] = useState(false)
     const navigate = useNavigate()
-    const order =async(states)=>{
+    const order = useStoreOrder((state) => state.order)
+    const setOrder = useStoreOrder((state) => state.setOrder)
+    const orders =async(states)=>{
       try {
         setloading(true)
         seterror(false)
@@ -26,15 +29,15 @@ export const useOrder=()=>{
           console.log(data)
           // Perform any additional actions with the data if needed
           // store the response data in local storage or state management
-          
+        setOrder(data)
           // Redirect to the desired page after successful signup
           navigate("/delevery")
         }
       } catch (error) {
-        toast.error("Error in signup")
+        toast.error("Error in orders")
         setloading(false)
-        console.error("Error in signup:", error)
+        console.error("Error in orders:", error)
       }
     }
-    return {order,loading,error}
+    return {orders,loading,error}
 }

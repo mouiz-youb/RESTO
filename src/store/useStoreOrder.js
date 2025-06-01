@@ -1,7 +1,7 @@
 import { create } from 'zustand'
 
-const useStoreOrder = create((set) => ({
+export const useStoreOrder = create((set) => ({
     order: "",
-    setUser: (order) => set({ order }),
+    setOrder: (order) => set({ order }),
     clearorder: () => set({ user: null, token: null }),
 }))
